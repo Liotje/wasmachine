@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2566">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="nl"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Zoekmachine - Wasmachine op Afbetaling&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f1f3f4;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.search-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.search-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.results {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 600px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: box-shadow 0.3s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sponsored {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fff8e1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #ffcc00;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sponsored img {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>object-fit: cover;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result a {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1a0dab;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.url {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #006621;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.snippet {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #545454;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="search-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" class="search-box" value="wasmachine op afbetaling" readonly&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="results" id="results"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener("DOMContentLoaded", function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let resultsContainer = document.getElementById("results");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let sponsoredResults = [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Beste wasmachines op afbetaling", snippet: "Bekijk de beste opties voor een wasmachine met gespreide betaling.", url: "wasmachine-shop.nl", image: "https://via.placeholder.com/80?text=Wasmachine+1" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Goedkope wasmachine deals", snippet: "Profiteer van scherpe prijzen en betaal je wasmachine in termijnen.", url: "betaalbare-wasmachines.nl", image: "https://via.placeholder.com/80?text=Wasmachine+2" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Wasmachines zonder aanbetaling", snippet: "Koop een wasmachine zonder direct een aanbetaling te doen.", url: "flexibel-betalen.com", image: "https://via.placeholder.com/80?text=Wasmachine+3" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Flexibele betaalopties voor wasmachines", snippet: "Kies een betaalmethode die bij jou past en spreid de kosten.", url: "gespreid-betalen.nl", image: "https://via.placeholder.com/80?text=Wasmachine+4" }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>];</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>let regularResults = [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Hoe koop je een wasmachine op afbetaling?", snippet: "Lees alles over de mogelijkheden en voorwaarden voor gespreid betalen.", url: "wasmachine-financiering.nl" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Beste budget wasmachines", snippet: "Vergelijk de goedkoopste wasmachines die je in termijnen kunt betalen.", url: "goedkope-wasmachines.nl" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Vergelijk aanbieders van gespreide betalingen", snippet: "Ontdek welke winkels en webshops flexibele betaalopties bieden.", url: "afbetalingsopties.nl" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Voor- en nadelen van betalen in termijnen", snippet: "Wat zijn de risico's en voordelen van een wasmachine op afbetaling?", url: "betalingstips.nl" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ title: "Wasautomaten financieren zonder rente", snippet: "Zijn er mogelijkheden om een wasmachine zonder rente te betalen?", url: "rentevrij-witgoed.nl" }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>];</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>function loadResults() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>sponsoredResults.forEach(result =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>let div = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>div.classList.add("result", "sponsored");</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>div.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;img src="${result.image}" alt="${result.title}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="result-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#"&gt;${result.title}&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="url"&gt;${result.url}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="snippet"&gt;${result.snippet}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resultsContainer.appendChild(div);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>regularResults.forEach(result =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>let div = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>div.classList.add("result");</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>div.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="result-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#"&gt;${result.title}&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="url"&gt;${result.url}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="snippet"&gt;${result.snippet}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resultsContainer.appendChild(div);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>loadResults();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
